@@ -6,18 +6,18 @@
             <form method="POST" action="/signup" novalidate class="needs-validation">
                  <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
-                    <input name="username" id="username" placeholder="Enter Username" type="text"
+                    <input name="listing[username]" id="username" placeholder="Enter Username" type="text"
                         class="form-control" required />
                     <div class="valid-feedback">Looks Good!</div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input name="email" id="email" placeholder="Enter Email Address" type="email"
+                    <input name="listing[email]" id="email" placeholder="Enter Email Address" type="email"
                         class="form-control" required />
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input name="password" id="password" placeholder="Enter Password" type="password"
+                    <input name="listing[password]" id="password" placeholder="Enter Password" type="password"
                         class="form-control" required />
                 </div>
                 <button class="btn btn-success">

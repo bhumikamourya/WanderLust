@@ -52,6 +52,7 @@ const sessionOptions = {
   },
 };
 
+
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -68,6 +69,8 @@ app.use((req, res, next) => {
   res.locals.currUser= req.user;
   next();
 })
+
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
@@ -76,6 +79,7 @@ app.use("/", userRouter);
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found"));
 })
+
 
 // error handling middleware
 app.use((err, req, res, next) => {

@@ -56,6 +56,7 @@ module.exports.renderEditForm = async (req, res) => {
 
     res.render("listings/edit.ejs", { listing ,originalImageUrl});
 }
+
 module.exports.updateListing = async (req, res) => {
     let { id } = req.params;
     let listing = await Listing.findByIdAndUpdate(id, { ...req.body.listing });
@@ -66,9 +67,12 @@ module.exports.updateListing = async (req, res) => {
         listing.image = { url, filename };
         await listing.save();
     }
+   
+
     req.flash("success", " Listing Updated!");
     res.redirect(`/listings/${id}`);
 }
+
 module.exports.destroyListing = async (req, res) => {
     let { id } = req.params;
     let deletedListing = await Listing.findByIdAndDelete(id);

@@ -26,7 +26,7 @@ module.exports.renderLoginForm = (req, res) => {
 }
 module.exports.login = async (req, res) => { //middleware hai jo post route m user ke authentication se pahle use hota hai.
     req.flash("success", "welcome back to wanderlust! you are logged in!");
-    const redirectUrl = res.locals.redirectUrl || "/listings";
+    req.redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
 }
 module.exports.logout = (req, res, next) => {
