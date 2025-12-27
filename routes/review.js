@@ -4,14 +4,14 @@ const Listing = require("../models/listing.js");
 const wrapAsync = require("../utils/wrapAsync");
 const Review = require("../models/review.js");
 const { validateReview } = require("../middleware.js");
-// const {isLoggedIn} = require("../middleware.js");
+const {isLoggedIn} = require("../middleware.js");
 const reviewController = require("../controllers/reviews.js");
 
 
 //post reviews route
 //reviews ke ander POST route
 router.post("/", validateReview
-  // , isLoggedIn
+  , isLoggedIn
   , wrapAsync(reviewController.createReview));
 
 //delete review route
