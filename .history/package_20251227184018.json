@@ -1,7 +1,4 @@
 {
-  "engine":{
-    "name":"22.13.1"
-  },
   "name": "major-project",
   "version": "1.0.0",
   "main": "index.js",
