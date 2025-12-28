@@ -6,10 +6,12 @@ const Review = require("../models/review.js");
 const { validateReview } = require("../middleware.js");
 const {isLoggedIn} = require("../middleware.js");
 const reviewController = require("../controllers/reviews.js");
+const {isreviewAuthor} = require("../middleware.js");
+
 
 
 //post reviews route
-//reviews ke ander POST route
+
 router.post("/", validateReview
   , isLoggedIn
   , wrapAsync(reviewController.createReview));

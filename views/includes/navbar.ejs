@@ -26,7 +26,8 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="background-color: rgb(247, 244, 244);">
             <div class="navbar-nav">
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
@@ -37,13 +38,13 @@
                 </form>
             </div>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">Airbnb your home</a>
+                <a class="nav-link" href="/listings/new"><button class="btn">Airbnb your home</button></a>
                 <% if(!currUser){%>
-                    <a class="nav-link" href="/signup"><b>SignUp</b></a>
-                    <a class="nav-link" href="/login"><b>LogIn</b></a>
+                    <a class="nav-link" href="/signup"><button class="btn"><b>SignUp</b></button></a>
+                    <a class="nav-link" href="/login"><button class="btn"><b>LogIn</b></button></a>
                     <% } %>
                         <% if(currUser) { %>
-                            <a class="nav-link" href="/logout"><b>Logout</b></a>
+                            <a class="nav-link" href="/logout"><button class="btn"><b>Logout</b></button></a>
                             <% } %>
             </div>
         </div>

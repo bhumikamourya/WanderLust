@@ -4,7 +4,6 @@ const wrapAsync = require("../utils/wrapAsync");
 const { validateListing } = require("../middleware.js");
 const {isLoggedIn} = require("../middleware.js");
 const {isOwner} = require("../middleware.js");
-const {isreviewAuthor} = require("../middleware.js");
 const listingController = require("../controllers/listings.js");
 const multer = require("multer");
 const {storage} = require("../cloudConfig.js");
@@ -35,7 +34,7 @@ router.route("/:id")
     validateListing, wrapAsync(listingController.updateListing))
   //delete route
   .delete(
-    isLoggedIn,isOwner,isreviewAuthor,
+    isLoggedIn,isOwner,
     wrapAsync(listingController.destroyListing));
 
 //Edit Route
