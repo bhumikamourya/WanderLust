@@ -31,7 +31,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
-            <div class=" ms-auto d-none d-md-flex">
+            <div class="navbar-nav ms-auto d-none d-md-flex">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2 search-input" type="search" placeholder="Search destinations">
                     <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
@@ -40,8 +40,8 @@
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="/listings/new"><button class="btn">Airbnb your home</button></a>
                 <% if(!currUser){%>
-                    <a class="nav-link" href="/signup"><button class="btn btn-dark"><b>SignUp</b></button></a>
-                    <a class="nav-link" href="/login"><button class="btn btn-outline-dark"><b>LogIn</b></button></a>
+                    <a class="nav-link" href="/signup"><button class="btn"><b>SignUp</b></button></a>
+                    <a class="nav-link" href="/login"><button class="btn"><b>LogIn</b></button></a>
                     <% } %>
                         <% if(currUser) { %>
                             <a class="nav-link" href="/logout"><button class="btn"><b>Logout</b></button></a>
